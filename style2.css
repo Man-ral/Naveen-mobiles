@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: rgb(76, 35, 115);
+    color: aliceblue;
+    text-align: center;
+    padding: 3em;
+    width: 100%;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 1em 0;
+    bottom: 0;
+    position: fixed;
+}
+img{
+    object-fit: cover;
+    height: 500px;
+    width: 500px;
+    border-radius: 8px;
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+}
+
+.i{
+    margin: 2em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
