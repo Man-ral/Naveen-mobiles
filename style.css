@@ -71,5 +71,12 @@ img{
     width: 100px;
     object-fit: cover;
 }
+@media screen and (max-width: 900px) {
+    
+    .product{
+        text-align: center;
+        width: 150px;
 
+    }
+}
 
