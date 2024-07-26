@@ -1,1 +1,1 @@
-# this is a project of the local mobile 
+# this is a project of the local mobile shop
