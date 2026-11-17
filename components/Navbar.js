@@ -1,8 +1,10 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { Menu, Phone, X } from "lucide-react";
 import { site } from "@/lib/site";
 import ThemeToggle from "./ThemeToggle";
+import { Button } from "./ui/button";
 const links = [["/", "Home"], ["/gallery", "Our shop"], ["/location", "Find us"]];
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -15,14 +17,12 @@ export default function Navbar() {
         <div className="hidden gap-8 md:flex">
           {links.map(([h, t]) => <Link key={h} href={h} className="font-medium opacity-80 transition hover:text-[var(--logo)] hover:opacity-100">{t}</Link>)}
         </div>
-        <a href={`tel:${site.phone}`} className="btn btn-main hidden !py-2 md:inline-flex">Call now</a>
+        <Button asChild size="sm" className="hidden md:inline-flex">
+          <a href={`tel:${site.phone}`}><Phone size={16} aria-hidden="true" />Call now</a>
+        </Button>
         <div className="flex items-center md:ml-2"><ThemeToggle />
         <button aria-label="Menu" aria-expanded={open} onClick={() => setOpen(!open)} className="grid h-10 w-10 place-items-center md:hidden">
-          <span className="block w-6 space-y-1.5">
-            <i className={`block h-0.5 bg-[var(--nav-text)] transition ${open ? "translate-y-2 rotate-45" : ""}`} />
-            <i className={`block h-0.5 bg-[var(--nav-text)] transition ${open ? "opacity-0" : ""}`} />
-            <i className={`block h-0.5 bg-[var(--nav-text)] transition ${open ? "-translate-y-2 -rotate-45" : ""}`} />
-          </span>
+          {open ? <X size={21} aria-hidden="true" /> : <Menu size={21} aria-hidden="true" />}
         </button></div>
       </nav>
       <div className={`grid overflow-hidden transition-all duration-300 md:hidden ${open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
