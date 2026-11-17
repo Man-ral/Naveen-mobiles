@@ -1,0 +1,132 @@
+{
+  "planHash": "81768eaab603349f4f57bc25dcdebecd3f87f80d42750004913ddb97201dd35f",
+  "phase": "standalone",
+  "recordedAtUtc": "2026-11-16T13:57:06.4827271Z",
+  "retryCount": 3,
+  "resetBaseline": false,
+  "complete": true,
+  "result": {
+    "setupSucceeded": true,
+    "setupDurationMs": 128212,
+    "setupFailureOutput": null,
+    "assertions": [
+      {
+        "name": "production-build",
+        "kind": "process",
+        "verificationMethod": "exit-code",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "\r\n\u003E naveen-mobiles@0.1.0 build\r\n\u003E next build\r\n\r\n\u25B2 Next.js 16.4.3 (Turbopack)\r\n\u2713 Running next.config.ts took 216ms\r\n- Cache Components enabled\r\n- Partial Prefetching enabled\r\n\r\n  Creating an optimized production build ...\r\n\u2713 Compiled successfully in 2.4s\r\n  Running TypeScript ...\r\n  Finished TypeScript in 4.5s ...\r\n  Collecting page data using 9 workers ...\r\n  Generating static pages using 9 workers (0/8) ...\r\n  Generating static pages using 9 workers (2/8) \r\n  Generating static pages using 9 workers (4/8) \r\n  Generating static pages using 9 workers (6/8) \r\n\u2713 Generating static pages using 9 workers (8/8) in 2.6s\r\n  Finalizing page optimization ...\r\n\r\nRoute (app)\r\n\u250C \u25CB /\r\n\u251C \u25CB /_not-found\r\n\u251C \u25CB /gallery\r\n\u251C \u25CB /location\r\n\u251C \u25CB /robots.txt\r\n\u2514 \u25CB /sitemap.xml\r\n\r\n\r\n\u25CB  (Static)  prerendered as static content\r\n\r\n",
+        "durationMs": 17879
+      },
+      {
+        "name": "lint",
+        "kind": "process",
+        "verificationMethod": "exit-code",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "\r\n\u003E naveen-mobiles@0.1.0 lint\r\n\u003E eslint\r\n\r\n\r\nC:\\Users\\imman\\OneDrive\\Desktop\\Project\\ui\\naveen backup\\old-site\\scripts.js\r\n  7:5  warning  Do not use \u0060window.location.href\u0060 to navigate to internal Next.js pages. Use \u0060redirect()\u0060 in the render phase, or \u0060useRouter().push()\u0060 in Client Components\u0027 event handlers instead. See: https://nextjs.org/docs/messages/no-location-assign-relative-destination  @next/next/no-location-assign-relative-destination\r\n\r\n\u2716 1 problem (0 errors, 1 warning)\r\n\r\n",
+        "durationMs": 11056
+      },
+      {
+        "name": "tests-pass",
+        "kind": "process",
+        "verificationMethod": "test-results",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "\r\n\u003E naveen-mobiles@0.1.0 test\r\n\u003E vitest run\r\n\r\n\r\n\u001B[1m\u001B[46m RUN \u001B[49m\u001B[22m \u001B[36mv3.2.7 \u001B[39m\u001B[90mC:/Users/imman/OneDrive/Desktop/Project/ui/naveen backup\u001B[39m\r\n\r\n \u001B[32m\u2713\u001B[39m lib/site.test.js \u001B[2m(\u001B[22m\u001B[2m3 tests\u001B[22m\u001B[2m)\u001B[22m\u001B[32m 5\u001B[2mms\u001B[22m\u001B[39m\r\n\r\n\u001B[2m Test Files \u001B[22m \u001B[1m\u001B[32m1 passed\u001B[39m\u001B[22m\u001B[90m (1)\u001B[39m\r\n\u001B[2m      Tests \u001B[22m \u001B[1m\u001B[32m3 passed\u001B[39m\u001B[22m\u001B[90m (3)\u001B[39m\r\n\u001B[2m   Start at \u001B[22m 19:26:56\r\n\u001B[2m   Duration \u001B[22m 1.19s\u001B[2m (transform 65ms, setup 0ms, collect 58ms, tests 5ms, environment 0ms, prepare 406ms)\u001B[22m\r\n\r\n",
+        "durationMs": 3492,
+        "testResults": {
+          "testFramework": "vitest",
+          "runnerDetectedFrom": "package_json",
+          "testsTotal": 3,
+          "testsPassed": 3,
+          "testsFailed": 0,
+          "testsSkipped": 0,
+          "parseFailed": false
+        }
+      },
+      {
+        "name": "home-route",
+        "kind": "http-probe",
+        "verificationMethod": "http-status",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": null,
+        "outputSample": "HTTP 200\n\u003C!DOCTYPE html\u003E\u003Chtml lang=\u0022en-IN\u0022 data-theme=\u0022dark\u0022 class=\u0022bricolage_grotesque_c6089457-module__w3oyGa__variable dm_sans_c69e9ea7-module__ngYT9G__variable\u0022\u003E\u003Chead\u003E\u003Cmeta charSet=\u0022utf-8\u0022/\u003E\u003Cmeta name=\u0022viewport\u0022 content=\u0022width=device-width, initial-scale=1\u0022/\u003E\u003Clink rel=\u0022preload\u0022 as=\u0022image\u0022 imageSrcSet=\u0022/_next/image?url=%2Fshop%2Fi1.jpg\u0026amp;w=32\u0026amp;q=75 32w, /_next/image?url=%2Fshop%2Fi1.jpg\u0026amp;w=48\u0026amp;q=75 48w, /_next/image?url=%2Fshop%2Fi1.jpg\u0026amp;w=64\u0026amp;q=75 64w, /_next/image?url=%2Fshop%2Fi1.jpg\u0026amp;w=96\u0026amp;q=75 96w, /_next/image?url=%2Fshop%2Fi1.jpg\u0026amp;w=128\u0026amp;q=75 128w, /_next/image?url=%2Fshop%2Fi1.jpg\u0026amp;w=256\u0026amp;q=75 256w, /_next/image?url=%2Fshop%2Fi1.jpg\u0026amp;w=384\u0026amp;q=75 384w, /_next/image?url=%2Fshop%2Fi1.jpg\u0026amp;w=640\u0026amp;q=75 640w, /_next/image?url=%2Fshop%2Fi1.jpg\u0026amp;w=750\u0026amp;q=75 750w, /_next/image?url=%2Fshop%2Fi1.jpg\u0026amp;w=828\u0026amp;q=75 828w, /_next/image?url=%2Fshop%2Fi1.jpg\u0026amp;w=1080\u0026amp;q=75 1080w, /_next/image?url=%2Fshop%2Fi1.jpg\u0026amp;w=1200\u0026amp;q=75 1200w, /_next/image?url=%2Fshop%2Fi1.jpg\u0026amp;w=1920\u0026amp;q=75 1920w, /_next/image?url=%2Fshop%2Fi1.jpg\u0026amp;w=2048\u0026amp;q=75 2048w, /_next/image?url=%2Fshop%2Fi1.jpg\u0026amp;w=3840\u0026amp;q=75 3840w\u0022 imageSizes=\u0022(max-width:768px) 256px, 320px\u0022/\u003E\u003Clink rel=\u0022stylesheet\u0022 href=\u0022/_next/static/chunks/%5Broot-of-the-server%5D__0e4__kh5paw9h._.css\u0022 data-precedence=\u0022next_static/chunks/[root-of-the-server]__0e4__kh5paw9h._.css\u0022/\u003E\u003Clink rel=\u0022preload\u0022 as=\u0022script\u0022 fetchPriority=\u0022low\u0022 href=\u0022/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_03l4kld1mrwfx._.js\u0022/\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_compiled_next-devtools_index_090k2jmam7qwg.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/1daa_next_dist_compiled_react-dom_cjs_react-dom-client_development_0mp0cp_t-ezj9.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/1q96_modules_next_dist_compiled_react-dom_cjs_react-dom_development_1sqry0_53krp4.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_compiled_react-dom_0grqycjrj6mju._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_164kp-67asdr9._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_compiled_1amofcmz--cdp._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_client_14zvornz047l2._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_%40swc_helpers_cjs_1r9vbqwj2323d._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/_1anvha4rlo79g._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/turbopack-_00pkkjbg3g3xr._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/_219uq1sj0q91c._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_0fo4b37iz3q53._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/_0yfz-69an4fyz._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/components_OrbScene_034rhgwsbmt6e.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_189va0w72n4ab._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/components_17gm9r0n74dqp._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cmeta name=\u0022theme-color\u0022 content=\u0022#0a1033\u0022/\u003E\u003Ctitle\u003ENaveen Mobile Shop Chaukhutiya | Mobiles, Accessories \u0026amp; Phone Repair\u003C/title\u003E\u003Cmeta name=\u0022description\u0022 content=\u0022Looking for a mobile shop near you in Chaukhutiya? Naveen Mobile Shop sells new mobiles and accessories and repairs phones. Near I \u2764 Chaukhutiya. Get directions and call now.\u0022/\u003E\u003Cmeta name=\u0022keywords\u0022 content=\u0022mobile shop near me,mobile shop in Chaukhutiya,mobile shop near Chaukhutiya,phone repair Chaukhutiya,mobile accessories Chaukhutiya,Naveen Mobile Shop\u0022/\u003E\u003Clink rel=\u0022canonical\u0022 href=\u0022https://your-site.vercel.app\u0022/\u003E\u003Cmeta property=\u0022og:title\u0022 content=\u0022Naveen Mobile Shop Chaukhutiya | Mobiles, Accessories \u0026amp; Phone Repair\u0022/\u003E\u003Cmeta property=\u0022og:description\u0022 content=\u0022Looking for a mobile shop near you in Chaukhutiya? Naveen Mobile Shop sells new mobiles and accesso\n\u2026[truncated]",
+        "durationMs": 7884
+      }
+    ],
+    "executions": [
+      {
+        "source": "setup[0]",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "ci"
+        ],
+        "cwd": "C:\\Users\\imman\\OneDrive\\Desktop\\Project\\ui\\naveen backup",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "production-build",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "run",
+          "build"
+        ],
+        "cwd": "C:\\Users\\imman\\OneDrive\\Desktop\\Project\\ui\\naveen backup",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "lint",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "run",
+          "lint"
+        ],
+        "cwd": "C:\\Users\\imman\\OneDrive\\Desktop\\Project\\ui\\naveen backup",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "tests-pass",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "test"
+        ],
+        "cwd": "C:\\Users\\imman\\OneDrive\\Desktop\\Project\\ui\\naveen backup",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "home-route",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "run",
+          "dev"
+        ],
+        "cwd": "C:\\Users\\imman\\OneDrive\\Desktop\\Project\\ui\\naveen backup",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      }
+    ]
+  }
+}

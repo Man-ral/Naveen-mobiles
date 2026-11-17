@@ -1,7 +1,9 @@
 import { Bricolage_Grotesque, DM_Sans } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MotionShell from "@/components/MotionShell";
 import { site } from "@/lib/site";
 
 const display = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-display", weight: ["700", "800"] });
@@ -18,7 +20,7 @@ export const metadata = {
   alternates: { canonical: "/" },
   openGraph: { title, description, url: site.url, siteName: site.name, locale: "en_IN", type: "website", images: [{ url: "/shop/i1.jpg" }] },
 };
-export const viewport = { themeColor: "#0a1033" };
+export const viewport = { themeColor: "#0b1b31" };
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -37,13 +39,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en-IN" data-theme="dark" suppressHydrationWarning className={`${display.variable} ${body.variable}`}>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: "try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}" }} />
+        <Script
+          id="theme-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: "try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}" }}
+        />
       </head>
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <MotionShell>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </MotionShell>
       </body>
     </html>
   );

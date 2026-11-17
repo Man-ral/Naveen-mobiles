@@ -1,10 +1,12 @@
 import Link from "next/link";
+import { MapPin, Phone } from "lucide-react";
+import { Button } from "./ui/button";
 import { site, directionsUrl } from "@/lib/site";
 export default function Footer() {
   return (
     <>
-      <footer className="bg-[var(--foot-bg)] px-5 pb-28 pt-14 text-[var(--foot-text)] md:pb-14">
-        <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-3">
+      <footer className="site-footer bg-[var(--foot-bg)] px-5 pb-28 pt-14 text-[var(--foot-text)] md:pb-14">
+        <div className="footer-grid mx-auto grid max-w-6xl gap-10 md:grid-cols-3">
           <div>
             <p className="font-display text-2xl font-extrabold">{site.name}</p>
             <p className="mt-3 max-w-xs text-[var(--foot-text)]/70">Mobiles, accessories and phone repair in Chaukhutiya.</p>
@@ -24,9 +26,9 @@ export default function Footer() {
         </div>
         <p className="mx-auto mt-10 max-w-6xl border-t border-white/15 pt-6 text-sm text-[var(--foot-text)]/50">© {site.name}. <Link href="/location" className="underline">Find us</Link><br></br>Made with <span className="text-red-500">♥</span> by manral</p>
       </footer>
-      <div className="fixed inset-x-3 bottom-3 z-50 flex gap-2 rounded-full bg-white p-2 shadow-2xl ring-1 ring-black/10 md:hidden">
-        <a href={`tel:${site.phone}`} className="btn flex-1 !bg-mist !py-3 !text-ink">📞 Call</a>
-        <a href={directionsUrl} target="_blank" rel="noopener" className="btn btn-main flex-[1.4] !py-3">📍 Take me to shop</a>
+      <div className="mobile-actions fixed inset-x-3 bottom-3 z-50 flex gap-2 rounded-full bg-white p-2 shadow-2xl ring-1 ring-black/10 md:hidden">
+        <Button asChild variant="subtle" className="flex-1 !py-3"><a href={`tel:${site.phone}`}><Phone size={17} aria-hidden="true" />Call</a></Button>
+        <Button asChild className="flex-[1.4] !py-3"><a href={directionsUrl} target="_blank" rel="noopener"><MapPin size={17} aria-hidden="true" />Take me to shop</a></Button>
       </div>
     </>
   );
